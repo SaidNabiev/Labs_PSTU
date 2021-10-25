@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cstdlib>
 #include <clocale>
 #include <ctime>
@@ -8,14 +8,15 @@ int main()
 {
 	setlocale(0, "");
 	srand(time(0));
-	int x, y;
+	int x, y, i;
 	y = -1;
 	x = rand() % 100;
-	for (int i = 1; i <= 7; i++)
+	i = 0;
+	 while ((i < 7) && (x != y))
 	{
-
-		while (x != y)
-		{
+		 ++i;
+		
+		
 			cout << "Введите число" << endl;
 			cin >> y;
 
@@ -37,18 +38,18 @@ int main()
 					{
 						cout << "Вы угадали!" << endl;
 					}
-			break;
+			
 
 
 
 
 
-		}
+		
 	}
 	if (y != x)
 	{
 		cout << "Вы не угадали!" << endl;
-		cout << "Задуманное число:"<<""<< x;
+		cout << "Задуманное число:" << "" << x;
 	}
 
 
